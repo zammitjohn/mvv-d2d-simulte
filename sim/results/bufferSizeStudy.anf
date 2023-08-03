@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/mvv-d2d-simulte/sim/results/Scenario_1/bufferSizeStudy.sca"/>
+    <inputs name="/mvv-d2d-simulte/sim/results/Scenario_2/bufferSizeStudy.sca"/>
+    <inputs name="/mvv-d2d-simulte/sim/results/Scenario_3/bufferSizeStudy.sca"/>
+    <inputs name="/mvv-d2d-simulte/sim/results/Scenario_4/bufferSizeStudy.sca"/>
+    <inputs name="/mvv-d2d-simulte/sim/results/Scenario_5/bufferSizeStudy.sca"/>
+    <inputs name="/mvv-d2d-simulte/sim/results/Scenario_6/bufferSizeStudy.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="Scenario 1">
+      <items xsi:type="scave:Group" name="Load Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_1-*) AND module(*.eNodeB.udp) AND name(rcvdPk:count)"/>
+        <items xsi:type="scave:BarChart" name="Scenario 1">
+          <properties name="Graph.Title" value="Network Load"/>
+          <properties name="X.Axis.Title" value="Client Buffer Size (s)"/>
+          <properties name="Y.Axis.Title" value="Load (Packets Passed)"/>
+          <properties name="Legend.Position" value="Inside"/>
+          <groupByFields>measurement</groupByFields>
+        </items>
+      </items>
+      <items xsi:type="scave:Group" name="End-to-end Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_1-*) AND name(endToEndDelay:stats:*)"/>
+        <items xsi:type="scave:ComputeScalar" scalarName="E2Estat" valueExpr="mean(*.ue[*].*.'endToEndDelay:stats:mean')" moduleExpr="*" groupByExpr=""/>
+      </items>
+    </datasets>
+    <datasets name="Scenario 2">
+      <items xsi:type="scave:Group" name="Load Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_2-*) AND module(*.eNodeB.udp) AND name(rcvdPk:count)"/>
+        <items xsi:type="scave:BarChart" name="Scenario 2">
+          <properties name="Graph.Title" value="Network Load"/>
+          <properties name="X.Axis.Title" value="Client Buffer Size (s)"/>
+          <properties name="Y.Axis.Title" value="Load (Packets Passed)"/>
+          <properties name="Legend.Position" value="Inside"/>
+          <groupByFields>measurement</groupByFields>
+        </items>
+      </items>
+      <items xsi:type="scave:Group" name="End-to-end Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_2-*) AND name(endToEndDelay:stats:*)"/>
+        <items xsi:type="scave:ComputeScalar" scalarName="E2Estat" valueExpr="mean(*.ue[*].*.'endToEndDelay:stats:mean')" moduleExpr="*" groupByExpr=""/>
+      </items>
+    </datasets>
+    <datasets name="Scenario 3">
+      <items xsi:type="scave:Group" name="Load Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_3-*) AND module(*.eNodeB.udp) AND name(rcvdPk:count)"/>
+        <items xsi:type="scave:BarChart" name="Scenario 3">
+          <properties name="Graph.Title" value="Network Load"/>
+          <properties name="X.Axis.Title" value="Client Buffer Size (s)"/>
+          <properties name="Y.Axis.Title" value="Load (Packets Passed)"/>
+          <properties name="Legend.Position" value="Inside"/>
+          <groupByFields>measurement</groupByFields>
+        </items>
+      </items>
+      <items xsi:type="scave:Group" name="End-to-end Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_3-*) AND name(endToEndDelay:stats:*)"/>
+        <items xsi:type="scave:ComputeScalar" scalarName="E2Estat" valueExpr="mean(*.ue[*].*.'endToEndDelay:stats:mean')" moduleExpr="*" groupByExpr=""/>
+      </items>
+    </datasets>
+    <datasets name="Scenario 4">
+      <items xsi:type="scave:Group" name="Load Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_4-*) AND module(*.eNodeB.udp) AND name(rcvdPk:count)"/>
+        <items xsi:type="scave:BarChart" name="Scenario 4">
+          <properties name="Graph.Title" value="Network Load"/>
+          <properties name="X.Axis.Title" value="Client Buffer Size (s)"/>
+          <properties name="Y.Axis.Title" value="Load (Packets Passed)"/>
+          <properties name="Legend.Position" value="Inside"/>
+          <groupByFields>measurement</groupByFields>
+        </items>
+      </items>
+      <items xsi:type="scave:Group" name="End-to-end Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_4-*) AND name(endToEndDelay:stats:*)"/>
+        <items xsi:type="scave:ComputeScalar" scalarName="E2Estat" valueExpr="mean(*.ue[*].*.'endToEndDelay:stats:mean')" moduleExpr="*" groupByExpr=""/>
+      </items>
+    </datasets>
+    <datasets name="Scenario 5">
+      <items xsi:type="scave:Group" name="Load Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_5-*) AND module(*.eNodeB.udp) AND name(rcvdPk:count)"/>
+        <items xsi:type="scave:BarChart" name="Scenario 5">
+          <properties name="Graph.Title" value="Network Load"/>
+          <properties name="X.Axis.Title" value="Client Buffer Size (s)"/>
+          <properties name="Y.Axis.Title" value="Load (Packets Passed)"/>
+          <properties name="Legend.Position" value="Inside"/>
+          <groupByFields>measurement</groupByFields>
+        </items>
+      </items>
+      <items xsi:type="scave:Group" name="End-to-end Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_5-*) AND name(endToEndDelay:stats:*)"/>
+        <items xsi:type="scave:ComputeScalar" scalarName="E2Estat" valueExpr="mean(*.ue[*].*.'endToEndDelay:stats:mean')" moduleExpr="*" groupByExpr=""/>
+      </items>
+    </datasets>
+    <datasets name="Scenario 6">
+      <items xsi:type="scave:Group" name="Load Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_6-*) AND module(*.eNodeB.udp) AND name(rcvdPk:count)"/>
+        <items xsi:type="scave:BarChart" name="Scenario 6">
+          <properties name="Graph.Title" value="Network Load"/>
+          <properties name="X.Axis.Title" value="Client Buffer Size (s)"/>
+          <properties name="Y.Axis.Title" value="Load (Packets Passed)"/>
+          <properties name="Legend.Position" value="Inside"/>
+          <groupByFields>measurement</groupByFields>
+        </items>
+      </items>
+      <items xsi:type="scave:Group" name="End-to-end Statistic">
+        <items xsi:type="scave:Add" filterPattern="run(Scenario_6-*) AND name(endToEndDelay:stats:*)"/>
+        <items xsi:type="scave:ComputeScalar" scalarName="E2Estat" valueExpr="mean(*.ue[*].*.'endToEndDelay:stats:mean')" moduleExpr="*" groupByExpr=""/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.0/@items.1 //@datasets/@datasets.1/@items.0/@items.1 //@datasets/@datasets.2/@items.0/@items.1 //@datasets/@datasets.3/@items.0/@items.1 //@datasets/@datasets.4/@items.0/@items.1 //@datasets/@datasets.5/@items.0/@items.1"/>
+    <chartSheets name="Varying the Number of Users" charts="//@datasets/@datasets.0/@items.0/@items.1 //@datasets/@datasets.1/@items.0/@items.1 //@datasets/@datasets.2/@items.0/@items.1"/>
+    <chartSheets name="Varying the Number of Views" charts="//@datasets/@datasets.3/@items.0/@items.1 //@datasets/@datasets.4/@items.0/@items.1 //@datasets/@datasets.5/@items.0/@items.1"/>
+  </chartSheets>
+</scave:Analysis>
